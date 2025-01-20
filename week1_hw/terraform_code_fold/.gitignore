@@ -1,0 +1,10 @@
+# Ignore variable files with sensitive data
+/variables.tf
+
+# State files
+*.tfstate
+*.tfstate.backup
+*.tfstate.*
+
+# Lock file
+.terraform*
