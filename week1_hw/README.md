@@ -16,7 +16,7 @@ What's the version of pip in the image?
 - In between 3 (exclusive) and 7 miles (inclusive),
 - In between 7 (exclusive) and 10 miles (inclusive),
 - Over 10 miles
-ans -->
+, ans -->
 
 select count(case when trip_distance <= 1 Then 1 End) as up_to_1_mile,
 count(case when trip_distance >1 and trip_distance <= 3 Then 1 End) as greater_then_one_mile,
@@ -32,7 +32,7 @@ Tip: For every day, we only care about one single trip with the longest distance
 2019-10-24
 2019-10-26
 2019-10-31
-ans -->
+, ans -->
 
 select date(lpep_pickup_datetime), max(trip_distance)
 from green_taxi_trips
@@ -45,7 +45,7 @@ East Harlem North, East Harlem South, Morningside Heights
 East Harlem North, Morningside Heights
 Morningside Heights, Astoria Park, East Harlem South
 Bedford, East Harlem North, Astoria Park
-ans -->
+, ans -->
 
 select pickup_zone."Zone", sum(green_taxi_trips."total_amount")
 from green_taxi_trips
@@ -63,7 +63,7 @@ Yorkville West
 JFK Airport
 East Harlem North
 East Harlem South
-ans -->
+, ans -->
 
 select dropoff_zone."Zone", max(tip_amount)
 from green_taxi_trips
@@ -81,7 +81,7 @@ q7. Which of the following sequences, **respectively**, describes the workflow 
 1. Downloading the provider plugins and setting up backend,
 2. Generating proposed changes and auto-executing the plan
 3. Remove all resources managed by terraform`
-ans -->
+, ans -->
 
 - terraform init: Downloading the provider plugins and setting up backend,
 - terraform apply: auto-approve: Generating proposed changes and auto-executing the plan
