@@ -61,9 +61,10 @@ x-airflow-common:
     GOOGLE_APPLICATION_CREDENTIALS: /.google/credentials/google_credentials.json
     AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: 'google-cloud-platform://?extra__google_cloud_platform__key_path=/.google/credentials/google_credentials.json'
 
-    # # TODO: Please change GCP_PROJECT_ID & GCP_GCS_BUCKET, as per your config
-    # GCP_PROJECT_ID: 'pivotal-surfer-336713'
-    # GCP_GCS_BUCKET: 'dtc_data_lake_pivotal-surfer-336713'
+    # TODO: Please change GCP_PROJECT_ID & GCP_GCS_BUCKET, as per your config
+    GCP_PROJECT_ID: 'elaborate-haven-440913-q2'
+    GCP_GCS_BUCKET: 'elaborate-haven-440913-q2-terra-bucket'
+
     PG_HOST: "${PG_HOST}" 
     PG_USER: "${PG_USER}" 
     PG_PASSWORD: "${PG_PASSWORD}" 
@@ -73,7 +74,7 @@ x-airflow-common:
 
 
   volumes:
-    - ./dags:/opt/airflow/dags
+    - ./dags_week3:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ~/.google/credentials/:/.google/credentials:ro
